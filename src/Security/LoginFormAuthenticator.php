@@ -99,13 +99,6 @@ class LoginFormAuthenticator extends AbstractFormLoginAuthenticator
             return new RedirectResponse($targetPath);
         
         }
-        
-
-        if($this->security->isGranted('ROLE_ADMIN'))
-        {
-            return new RedirectResponse($this->urlGenerator->generate('easyadmin'));
-
-        }
         return new RedirectResponse($this->urlGenerator->generate('app_map'));
 
     }

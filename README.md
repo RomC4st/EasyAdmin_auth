@@ -9,11 +9,15 @@
   
   *  `/logout` - disconnect and redirection to /login.
 
-  *  `/_secret_backend` - Back-office access
+  *  `/_secret_backend` - Back-office access (protected) 
 
   *  `/forgot` - Send you an email with a link to change your password
 
   *  `/reset/{token}` - Link send by email 
+
+  *  `/api` - Api Platform (protected) 
+
+  * `/map` -Access to map (protected)
 
 
 ### Installation

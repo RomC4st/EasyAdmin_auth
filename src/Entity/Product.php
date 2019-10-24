@@ -5,7 +5,6 @@ namespace App\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use ApiPlatform\Core\Annotation\ApiResource;
 
-
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ProductRepository")
  * @ApiResource
@@ -18,6 +17,8 @@ class Product
      * @ORM\Column(type="integer")
      */
     private $id;
+
+
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -33,6 +34,20 @@ class Product
      * @ORM\Column(type="boolean")
      */
     private $isActive;
+
+    /**
+     * @ORM\Column(type="float")
+     */
+    private $Longitude;
+
+    /**
+     * @ORM\Column(type="float")
+     */
+    private $Latitude;
+
+   
+
+
 
     public function getId(): ?int
     {
@@ -74,4 +89,32 @@ class Product
 
         return $this;
     }
+
+    public function getLongitude(): ?float
+    {
+        return $this->Longitude;
+    }
+
+    public function setLongitude(float $Longitude): self
+    {
+        $this->Longitude = $Longitude;
+
+        return $this;
+    }
+
+    public function getLatitude(): ?float
+    {
+        return $this->Latitude;
+    }
+
+    public function setLatitude(float $Latitude): self
+    {
+        $this->Latitude = $Latitude;
+
+        return $this;
+    }
+
+
+
+
 }

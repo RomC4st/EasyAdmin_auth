@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Log in{% endblock %}
+
+{% block body %}
+    {% for message in app.flashes('error') %}
+        <div class="flash-notice-black">
+            {{ message }}
+        </div>
+    {% endfor %}
+<form method="post" class="box" >
+    {% for message in app.flashes('success') %}
+        <div class="flash-notice-white">
+            {{ message }}
+        </div>
+    {% endfor %}
+    {% if error %}
+        <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+    {% endif %}
+
+    {% if app.user %}
+        <div class="mb-3">
+            You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
+        </div>
+    {% endif %}
+
+    <div class="log-form">
+        <h2>Login</h2> 
+            <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" placeholder="Email" required >
+  
+            <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        {{ form(form) }}
+        <button class="btn btn-lg btn-primary" type="submit">
+            Sign in
+        </button>
+        <input type="hidden" name="_csrf_token"
+            value="{{ csrf_token('authenticate') }}"
+        >
+         <div class="bottom">
+                <input type="checkbox" name="_remember_me">
+                <label for="_remember_me" >Remember me</label>
+           
+            <a href='{{ path('app_forgot_password') }}' class='link'>Forgot password ?</a>
+        </div>  
+        
+    </div>
+    </br>
+    <script src="//www.google.com/recaptcha/api.js?hl=en"></script>
+</form>
+{% endblock %}

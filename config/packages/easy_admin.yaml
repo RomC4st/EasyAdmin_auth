@@ -1,0 +1,27 @@
+easy_admin:
+  user:
+    name_property_path: 'Email'
+  site_name: 'ACME Megacorp.'
+  design:
+        menu: 
+          - { entity: 'User', icon: 'user'}
+          - { entity: 'Product', icon: 'box' }
+  entities:
+    User:
+      class: App\Entity\User
+      controller: App\Controller\UserController
+      list:
+        fields: ['id', 'email','password','roles']  
+      new:
+        fields:
+          - 'email'
+          - 'password'
+          - { property: 'roles', type: 'App\Form\Type\RoleType' }
+      edit:
+        fields:
+          - 'email'
+          - { property: 'roles', type: 'App\Form\Type\RoleType' }
+       
+    Product:
+        class:  App\Entity\Product
+     

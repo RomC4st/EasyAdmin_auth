@@ -1,0 +1,109 @@
+html,body,h1{
+  margin:0;
+  padding:0;
+}
+body{
+  font-size: 16px;
+  letter-spacing:4px;
+  font-family: sans-serif;
+}
+header,footer{
+  background-color:rgba(10,10,10,0.9);
+  width:100%;
+  min-height:100px;
+}
+header{
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+footer {
+  position:absolute;
+  bottom:0
+}
+header h1 {
+  color:#fff;
+  text-align:center;
+  font-size: 48px;
+  letter-spacing: 3px;
+}
+
+/*Formulaire*/
+.box{
+  width: 450px;
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background-color:rgba(10,10,10,0.9);
+  border-radius: 60px;
+  box-shadow: 10px 12px 10px 6px rgba(10,10,50,0.9) ;
+  text-align: center; 
+}
+.box .log-form h2{
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500; 
+  font-size: 30px;
+  margin-bottom:40px;
+}
+.bottom label{
+  color:#FFF;
+  font-size: 12px;
+  float:left;
+  margin-left: 10px
+}
+.box input[type = "checkbox"]{
+  float:left;
+  
+}
+.box input[type = "email"],.box input[type = "password"]{
+  display: block;
+  margin: 30px auto;
+  text-align: center;
+  padding: 12px 0px;
+  width: 200px;
+  color: #000;
+  width:100%;
+}
+.flash-notice-white{
+  color:#fff
+}
+.flash-notice-black{
+  color:#000;
+  text-align:center;
+  padding-top:2%
+}
+.box button{
+  display: block;
+  margin: 15px auto;
+  text-align: center;
+  background-color: #3d6eb8;
+  padding: 12px 36px;
+  color: white;
+  cursor: pointer;
+  width: 100%;
+}
+#authentication div{
+  text-align: center;
+}
+.g-recaptcha {
+  display: inline-block;
+}
+.bottom{
+  margin: 30px 0px;
+}
+a.link{
+  color:#fff;
+  text-decoration:none;
+  font-size:12px;
+  float:right
+}
+a.link-login{
+  color:#fff;
+  text-decoration:none;
+}
+a.link:hover{
+  color:#3d6eb8
+}

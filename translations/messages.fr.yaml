@@ -1,0 +1,10 @@
+## YAML Template.
+ID: ID
+Product: Produits
+Name: Nom
+Number: Nombre
+Is active: Actif
+User: Utilisateurs
+Email: Email
+Password: Mot de passe
+Roles: Roles

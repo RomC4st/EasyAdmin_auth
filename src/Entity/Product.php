@@ -53,6 +53,11 @@ class Product
      */
     private $Latitude;
 
+    /**
+     * @ORM\Column(type="text", nullable=true)
+     */
+    private $description;
+
    
 
 
@@ -118,6 +123,18 @@ class Product
     public function setLatitude(float $Latitude): self
     {
         $this->Latitude = $Latitude;
+
+        return $this;
+    }
+
+    public function getDescription(): ?string
+    {
+        return $this->description;
+    }
+
+    public function setDescription(?string $description): self
+    {
+        $this->description = $description;
 
         return $this;
     }

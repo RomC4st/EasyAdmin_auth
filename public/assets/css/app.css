@@ -114,3 +114,17 @@ a.link:hover{
   width:100vw;
   height:100vh;
 }
+
+.mapboxgl-popup {
+  font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  }
+.mapboxgl-popup-content{
+    background-color: #fff;
+    max-width:200px;
+  }
+.mapboxgl-popup-close-button{
+    float:right;
+    background-color: #fff;
+    border-width:0px
+  }
+  

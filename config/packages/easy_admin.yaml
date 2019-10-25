@@ -24,4 +24,13 @@ easy_admin:
        
     Product:
         class:  App\Entity\Product
+        list:
+          fields: 
+            - 'id'
+            - 'name'
+            - 'description'
+            - 'number'
+            - { property: 'is_active', type: 'toggle' }
+            - 'latitude'
+            - 'longitude'
      

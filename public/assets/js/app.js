@@ -16,7 +16,7 @@
           }
         });
         item.map(e => {
-          if (e !== undefined) {
+          if (e) {
             return DATA.push(e);
           }
         })

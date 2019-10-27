@@ -2,7 +2,7 @@
 namespace App\Controller;
 
 use App\Entity\Product;
-use App\Service\GetLatLong;
+use App\Service\GetCoordinates;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\EasyAdminController;
 
 
@@ -11,7 +11,7 @@ class ProductController extends EasyAdminController
   public function persistEntity($entity)
   {
       $addr=$entity->getAdress();
-      $getlatlong=new GetLatLong();
+      $getlatlong=new GetCoordinates();
       $geoloc=$getlatlong->indexAction($addr);
       $entityManager = $this->getDoctrine()->getManager();
       $entity->setLatitude($geoloc['latitude']);
@@ -23,7 +23,7 @@ class ProductController extends EasyAdminController
   {
       $addr=$entity->getAdress();
       $id=$entity->getId();
-      $getlatlong=new GetLatLong();
+      $getlatlong=new GetCoordinates();
       $geoloc=$getlatlong->indexAction($addr);
       $entityManager = $this->getDoctrine()->getManager();
       $product = $entityManager->getRepository(Product::class)->findOneBy(array('id'=> $id));

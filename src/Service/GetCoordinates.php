@@ -6,7 +6,7 @@ use Geocoder\Query\GeocodeQuery;
 use Geocoder\Query\ReverseQuery;
 use Geocoder\Provider\LocationIQ\LocationIQ;
 
-class GetLatLong
+class GetCoordinates
 {
     public function indexAction($addr)
     {

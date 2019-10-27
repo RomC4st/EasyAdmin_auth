@@ -25,9 +25,6 @@ class Product
      * @ORM\Column(type="integer")
      */
     private $id;
-
-
-
     /**
      * @ORM\Column(type="string", length=255)
      */
@@ -44,19 +41,27 @@ class Product
     private $isActive;
 
     /**
+     *
      * @ORM\Column(type="float")
      */
-    private $Longitude;
+    private $longitude;
 
     /**
+     * 
      * @ORM\Column(type="float")
      */
-    private $Latitude;
+    private $latitude;
 
     /**
      * @ORM\Column(type="text", nullable=true)
      */
     private $description;
+
+    /**
+     *
+     * @ORM\Column(type="string", length=255)
+     */
+    private $adress;
 
    
 
@@ -105,24 +110,24 @@ class Product
 
     public function getLongitude(): ?float
     {
-        return $this->Longitude;
+        return $this->longitude;
     }
 
-    public function setLongitude(float $Longitude): self
+    public function setLongitude(float $longitude): self
     {
-        $this->Longitude = $Longitude;
+        $this->longitude = $longitude;
 
         return $this;
     }
 
     public function getLatitude(): ?float
     {
-        return $this->Latitude;
+        return $this->latitude;
     }
 
-    public function setLatitude(float $Latitude): self
+    public function setLatitude(float $latitude): self
     {
-        $this->Latitude = $Latitude;
+        $this->latitude = $latitude;
 
         return $this;
     }
@@ -135,6 +140,18 @@ class Product
     public function setDescription(?string $description): self
     {
         $this->description = $description;
+
+        return $this;
+    }
+
+    public function getAdress(): ?string
+    {
+        return $this->adress;
+    }
+
+    public function setAdress(string $adress): self
+    {
+        $this->adress = $adress;
 
         return $this;
     }

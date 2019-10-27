@@ -45,5 +45,5 @@
   * Password: 54Br*Y781
 
   You can modify user seeds in src/DataFixtures/UserFixtures.php
-
-# EasyAdmin_auth
+  This app use LocationIQ geocoder provider to return coordinates from adress 
+  Feel free to change it in Service/GetLatLong.php dont forget to modify API_LOCATIONIQ_KEY in .env

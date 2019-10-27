@@ -14,5 +14,5 @@ return [
     Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle::class => ['dev' => true, 'test' => true],
     Symfony\Bundle\WebProfilerBundle\WebProfilerBundle::class => ['dev' => true, 'test' => true],
     Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle::class => ['all' => true],
-    Beelab\Recaptcha2Bundle\BeelabRecaptcha2Bundle::class =>['dev' => true, 'test' => true],
+    Beelab\Recaptcha2Bundle\BeelabRecaptcha2Bundle::class => ['dev' => true, 'test' => true],
 ];

@@ -36,7 +36,7 @@
                   "type": "Feature",
                   "geometry": {
                     "type": "Point",
-                    "coordinates": [DATA[i].Longitude, DATA[i].Latitude]
+                    "coordinates": [DATA[i].longitude, DATA[i].latitude]
                   },
                   "properties": {
                     "description": `<strong>${DATA[i].name}</strong><p>${DATA[i].description}</p>`,

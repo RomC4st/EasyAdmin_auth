@@ -56,6 +56,8 @@
 
    * APP_PROVIDER_GEOCODER_KEY=your_locationiq_api_key
 
+   * APP_MAPBOX_KEY=your_mapbox_api_key
+
 *  ***composer install*** to install dependency
 
   

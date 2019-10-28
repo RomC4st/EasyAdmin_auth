@@ -1,6 +1,5 @@
 (function (window) {
   const mapboxKey=document.getElementById('hidden')
-  console.log(mapboxKey.innerHTML)
   mapboxgl.accessToken = mapboxKey.innerHTML
   const map = new mapboxgl.Map({
     container: 'map',

@@ -8,7 +8,17 @@
         {% endblock %}
     </head>
     <body>  
-        {% block body %}<div id='map'></div>{% endblock %} 
+        {% block body %} 
+        <header class='map-header'>
+            <div class='right'>
+                <a href="/logout" class="button">Logout</a> 
+                    {% if is_granted('ROLE_ADMIN') == true %}
+                            <a href="/_secret_backend" class="button admin">Back Office</a> 
+                    {% endif %}
+            </div>
+        </header>
+            <div id='map'></div>
+        {% endblock %} 
         
         {% block javascripts %}
           <script src='{{asset('assets/js/cdn/Mapbox_cdn.js')}}'></script>

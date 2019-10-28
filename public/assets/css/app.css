@@ -111,7 +111,7 @@ a.link:hover{
   color:#3d6eb8
 }
 #map{
-  width:100vw;
+  width:99.2vw;
   height:100vh;
 }
 
@@ -126,5 +126,27 @@ a.link:hover{
     float:right;
     background-color: #fff;
     border-width:0px
+  }
+  .right{
+    float:right;
+    width:400px
+  }
+  .map-header .right .button{
+    position:absolute;
+    right:30px;
+    top:10px;
+    display: block;
+    margin: 15px auto;
+    text-align: center;
+    background-color: #3d6eb8;
+    padding: 12px 36px;
+    color: white;
+    cursor: pointer;
+    width: 100px;
+    text-decoration: none;
+  }
+  .admin{
+    right:250px !important;
+    width:150px !important
   }
   

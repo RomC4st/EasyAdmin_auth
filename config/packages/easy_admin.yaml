@@ -6,6 +6,7 @@ easy_admin:
         menu: 
           - { entity: 'User', icon: 'user'}
           - { entity: 'Product', icon: 'box' }
+          - { label: 'Map', route: 'app_map', icon: 'link' }
   entities:
     User:
       class: App\Entity\User

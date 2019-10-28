@@ -12,12 +12,10 @@
         {% block body %} 
         <div id='hidden' >{{APP_MAPBOX_KEY}}</div>
         <header class='map-header'>
-            <div class='right'>
                 <a href="/logout" class="button">Logout</a> 
                     {% if is_granted('ROLE_ADMIN') == true %}
                             <a href="/_secret_backend" class="button admin">Back Office</a> 
                     {% endif %}
-            </div>
         </header>
             <div id='map'></div>
         {% endblock %} 

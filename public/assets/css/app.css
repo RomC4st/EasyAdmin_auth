@@ -127,11 +127,8 @@ a.link:hover{
     background-color: #fff;
     border-width:0px
   }
-  .right{
-    float:right;
-    width:400px
-  }
-  .map-header .right .button{
+  
+  .map-header .button{
     position:absolute;
     right:30px;
     top:10px;

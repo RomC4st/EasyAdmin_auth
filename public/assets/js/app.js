@@ -1,6 +1,7 @@
 (function (window) {
-
-  mapboxgl.accessToken = 'pk.eyJ1IjoiY3IwbjBzIiwiYSI6ImNqdHB1cTQ2azA3cmw0M2swdGtiY3Noa3MifQ.EM0c8d_0JEcc3FOLQ8P0CA';
+  const mapboxKey=document.getElementById('hidden')
+  console.log(mapboxKey.innerHTML)
+  mapboxgl.accessToken = mapboxKey.innerHTML
   const map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/streets-v11',
@@ -53,6 +54,7 @@
           map.on('click', `point_${i}`, function (e) {
             const coordinates = e.features[0].geometry.coordinates.slice();
             const description = e.features[0].properties.description;
+
             // Ensure that if the map is zoomed out such that multiple
             // copies of the feature are visible, the popup appears
             // over the copy being pointed to.

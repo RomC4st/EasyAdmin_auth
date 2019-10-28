@@ -54,7 +54,7 @@
 
    * APP_RECAPTCHA_SECRET_KEY=your_recaptcha_secret_key
 
-   * API_LOCATIONIQ_KEY=your_locationiq_api_key
+   * APP_PROVIDER_GEOCODER_KEY=your_locationiq_api_key
 
 *  ***composer install*** to install dependency
 
@@ -92,5 +92,5 @@
 
 -- This app use LocationIQ geocoder provider to return coordinates from an adress </hr>
 
--- Feel free to change provider in Service/GetCoordinates.php dont forget to modify API_LOCATIONIQ_KEY in   
+-- Feel free to change provider in Service/GetCoordinates.php dont forget to modify APP_PROVIDER_GEOCODER_KEY in   
  &nbsp; &nbsp;.env 

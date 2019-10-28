@@ -149,4 +149,6 @@ a.link:hover{
     right:250px !important;
     width:150px !important
   }
-  
+  #hidden{
+    display:none
+  }

@@ -4,3 +4,4 @@ twig:
     strict_variables: '%kernel.debug%'
     globals:
         site_key: '%env(APP_RECAPTCHA_SITE_KEY)%'
+        APP_MAPBOX_KEY: '%env(APP_MAPBOX_KEY)%'

@@ -13,7 +13,7 @@ class GetCoordinates
       try {
         $geocoder = new \Geocoder\ProviderAggregator();
         $adapter  = new \Http\Adapter\Guzzle6\Client();
-        $apiKey=$_ENV['API_LOCATIONIQ_KEY'];
+        $apiKey=$_ENV['APP_PROVIDER_GEOCODER_KEY'];
         $geocoder->registerProviders([
             new \Geocoder\Provider\LocationIQ\LocationIQ($adapter,$apiKey)
         ]);   
